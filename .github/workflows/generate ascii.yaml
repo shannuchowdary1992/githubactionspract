@@ -17,3 +17,9 @@ jobs:
 
         - name: Generate ascii artwork
           run: cowsay -f dragon "Run for cover, iam a dragon...raw" >> dragon.txt
+
+        - name: filter file
+          run: grep -i "dragon" dragon.txt
+
+        - name: list file
+          run: cat dragon.txt
