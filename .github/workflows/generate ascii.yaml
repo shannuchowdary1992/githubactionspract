@@ -1,0 +1,16 @@
+name: My ascii workflow
+on: push
+jobs:
+    my_job:
+      runs-on: ubuntu-latest
+      steps:
+        - name: checkout repo
+          uses: actions/checkout@v4
+
+        - name: List and read files 
+          run: |
+            ls -ltr
+            cat README.md
+            
+        - name: Generate ascii artwork
+          run: cowsay -f dragon "Run for cover, iam a dragon...raw" >> dragon.txt
