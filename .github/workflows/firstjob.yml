@@ -1,0 +1,17 @@
+name: My first Workflow # name of the workflow
+on: push  # events
+jobs: 
+  first_job:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout repo
+        uses: actions/checkout@v4
+        
+      - name: Welcome message gretting
+        run: echo "hello Githubactions."
+      
+      - name: list files
+        run: ls
+
+      - name: Read files
+        run: cat README.md
