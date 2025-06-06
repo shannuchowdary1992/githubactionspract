@@ -7,10 +7,13 @@ jobs:
         - name: checkout repo
           uses: actions/checkout@v4
 
+        - name: install cowsay
+          run: sudo apt-get install cowsay -y
+
         - name: List and read files 
           run: |
             ls -ltr
             cat README.md
-            
+
         - name: Generate ascii artwork
           run: cowsay -f dragon "Run for cover, iam a dragon...raw" >> dragon.txt
